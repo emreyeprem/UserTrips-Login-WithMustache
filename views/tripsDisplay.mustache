@@ -1,0 +1,31 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="site.css" />
+</head>
+
+<body>
+
+  <h2>Your Trips</h2>
+
+<ul id="tripDetailContainer">
+  {{#tripList}}
+  <form action="/delete_trip" method="POST">
+  <li class="tripPost">
+    <label>{{tripLocation}}</label>
+    <h5>Departure Date : {{DepartureDate}} </h5>
+    <h5>Return Date : {{ReturnDate}}</h5>
+    <img class="images"src="{{Poster}}"/>
+  </li>
+        <input type="hidden" name="locationName" value="{{tripLocation}}"/>
+        <input type="hidden" name="userId" value="{{username}}"/>
+             <input type="submit" value="Remove"/>
+
+  </form>
+  {{/tripList}}
+
+</ul>
+<a href="/user/add_trips"><button>Add trip</button></a>
+<a href="/user/logout"><button>Logout</button></a>
+</body>
+
+</html>

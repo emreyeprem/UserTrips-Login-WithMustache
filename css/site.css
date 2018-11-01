@@ -1,0 +1,12 @@
+#tripDetailContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.images{
+  height: 200px;
+  width: 250px;
+}
+.tripPost{
+  margin: 5%;
+}
